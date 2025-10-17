@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120">
+  <rect width="100%" height="100%" fill="#e6f8ea"/>
+  <rect x="10" y="10" width="140" height="100" rx="8" fill="#cfead0"/>
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="#2a7a2e" font-size="14">Kegiatan 1</text>
+</svg>

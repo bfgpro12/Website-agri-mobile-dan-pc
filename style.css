@@ -1,0 +1,93 @@
+/* style.css - styles for Prodi Agribisnis site */
+:root{
+  --primary:#2a7a2e; /* green */
+  --accent:#f4a261; /* warm accent */
+  --bg:#f7f9fb;
+  --text:#1b1b1b;
+  --muted:#666;
+}
+*{box-sizing:border-box}
+body{font-family: 'Segoe UI', Roboto, -apple-system, system-ui, Arial; margin:0; color:var(--text); background:var(--bg); line-height:1.5}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+header{background:linear-gradient(90deg, rgba(42,122,46,0.95), rgba(36,105,40,0.95));color:#fff}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{width:56px;height:56px;border-radius:8px;background:#fff;padding:6px}
+.nav{display:flex;gap:12px}
+.nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:6px;font-weight:600}
+.nav a:hover{background:rgba(255,255,255,0.12)}
+.hero{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:center;padding:36px 20px}
+.hero .intro h1{margin:0 0 8px;font-size:36px}
+.hero .intro p{color:var(--bg);color:#e7f6ea;margin:0 0 16px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700}
+.card{background:#fff;border-radius:10px;padding:16px;box-shadow:0 6px 18px rgba(7,12,14,0.06)}
+.mission-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mission-list li{list-style:none;background:linear-gradient(180deg,#fff,#f8fff8);padding:8px;border-radius:8px}
+main{padding:26px 0}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border:1px solid #e6e6e6;padding:10px;text-align:left}
+.table th{background:#f2f6f2}
+.staff-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.staff{display:flex;gap:12px;align-items:center}
+.staff img{width:64px;height:64px;border-radius:8px;object-fit:cover}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px}
+form .form-row{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
+input[type=text],input[type=email],textarea{padding:10px;border-radius:8px;border:1px solid #d4d4d4}
+button[type=submit]{background:var(--primary);color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
+footer{background:#0f1720;color:#c9d6d0;padding:18px}
+.footer-inner{display:flex;flex-direction:column;gap:8px;align-items:center}
+.social a{color:#fff;margin:0 6px;text-decoration:none}
+
+/* Responsive */
+@media(max-width:880px){
+  .hero{grid-template-columns:1fr}
+  .topbar{padding:10px}
+}
+@media(max-width:520px){
+  .nav{display:none}
+  .hero .intro h1{font-size:26px}
+}
+
+/* Mobile bottom navigation styles */
+.mobile-bottom-nav{display:none} /* default hidden */
+@media(max-width:520px){
+  .mobile-bottom-nav{
+    display:flex;
+    position:fixed;
+    left:12px;
+    right:12px;
+    bottom:12px;
+    background:rgba(255,255,255,0.98);
+    box-shadow:0 8px 20px rgba(7,12,14,0.12);
+    border-radius:12px;
+    padding:6px;
+    justify-content:space-between;
+    align-items:center;
+    z-index:60;
+  }
+  .mobile-bottom-nav .nav-item{
+    flex:1;
+    text-align:center;
+    padding:8px 6px;
+    text-decoration:none;
+    color:var(--text);
+    font-weight:700;
+    border-radius:8px;
+    margin:0 6px;
+    background:transparent;
+  }
+  .mobile-bottom-nav .nav-item:active, .mobile-bottom-nav .nav-item:focus{
+    outline:none;
+    background:rgba(42,122,46,0.08);
+  }
+  /* emphasize current page using simple active class or via href matching (optional)
+     If you want the active look, add class="active" to the link in the current page's HTML */
+  .mobile-bottom-nav .nav-item.active{
+    background:var(--primary);
+    color:#fff;
+  }
+  /* Make sure main content is not obscured by the nav */
+  body{padding-bottom:72px}
+}
