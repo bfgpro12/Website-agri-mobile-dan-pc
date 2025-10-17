@@ -59,7 +59,7 @@ footer{background:#0f1720;color:#c9d6d0;padding:18px}
     left:12px;
     right:12px;
     bottom:12px;
-    background:rgba(255,255,255,0.98);
+    background:#2a7a2e;
     box-shadow:0 8px 20px rgba(7,12,14,0.12);
     border-radius:12px;
     padding:6px;
@@ -86,7 +86,7 @@ footer{background:#0f1720;color:#c9d6d0;padding:18px}
      If you want the active look, add class="active" to the link in the current page's HTML */
   .mobile-bottom-nav .nav-item.active{
     background:var(--primary);
-    color:#fff;
+    color:#2a7a2e;
   }
   /* Make sure main content is not obscured by the nav */
   body{padding-bottom:72px}
